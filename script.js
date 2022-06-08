@@ -19,9 +19,13 @@ function draw_hr(){
 }
 
 function draw_post(post) {
-    document.getElementById('main').appendChild(draw_title(post.title));
-    document.getElementById('main').appendChild(draw_body(post.body));
-    document.getElementById('main').appendChild(draw_hr());
+    const postDiv = document.createElement("div");
+
+    postDiv.appendChild(draw_title(post.title));
+    postDiv.appendChild(draw_body(post.body));
+    postDiv.appendChild(draw_hr());
+
+    document.getElementById('main').appendChild(postDiv);
 }
 
 
